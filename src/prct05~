@@ -1,0 +1,15 @@
+#! /usr/bin/python
+
+n = int(raw_input('Introduzca el numero de intevalos (n > 0): '))
+suma = 0
+for i in range(1,n+1):
+  a = float(i-1)/n
+  b = float(i)/n
+  x_i = float(i - 0.5)/n
+  fx_i = float(4.0/(1.0 + x_i * x_i))
+  print 'Subintervalo: [%3.2f ,%3.2f ]' %(a , b) 
+  print 'x_i:%3.3f ' % x_i
+  print 'fx_i:%3.3f '% fx_i
+  suma += fx_i/n
+aprox = suma
+print 'El valor aproximado de PI es:%3.10f '% suma
